@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/SoftRyzen_Test/static/css/main.e205d71f.css",
+    "main.js": "/SoftRyzen_Test/static/js/main.c69883e3.js",
+    "static/media/BG.png": "/SoftRyzen_Test/static/media/BG.5493670ecd82ac513f10.png",
+    "index.html": "/SoftRyzen_Test/index.html",
+    "main.e205d71f.css.map": "/SoftRyzen_Test/static/css/main.e205d71f.css.map",
+    "main.c69883e3.js.map": "/SoftRyzen_Test/static/js/main.c69883e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e205d71f.css",
+    "static/js/main.c69883e3.js"
+  ]
+}
