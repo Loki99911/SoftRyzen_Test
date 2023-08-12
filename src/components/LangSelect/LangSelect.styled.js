@@ -33,20 +33,19 @@ export const SelectInput = styled(Select)`
   }
 
   .Select__single-value {
-    color: #3f3f3f;
+    color: var(--main-black);
     overflow: visible;
   }
 
   .Select__defaultValue,
   .Select__indicator {
-    color: #3f3f3f;
+    color: var(--main-black);
   }
 
   .Select__menu {
     padding: 16px 12px;
     background-color: #ffffff;
     border-radius: 8px;
-    color: yellow;
   }
 
   .Select__menu-list {
@@ -58,8 +57,8 @@ export const SelectInput = styled(Select)`
   .Select__option {
     padding: 4px 0;
     background-color: transparent;
-    color: #aca7c3;
-    border-bottom: 1px solid #aca7c3;
+    color: var(--main-gray);
+    border-bottom: 1px solid var(--main-gray);
     cursor: pointer;
   }
 `;

@@ -1,5 +1,5 @@
-import { SelectInput } from "./LangSelect.styled";
 
+import { SelectInput } from './LangSelect.styled';
 const LangSelect = () => {
   const options = [
     { value: 'EN', label: 'EN' },
@@ -10,6 +10,7 @@ const LangSelect = () => {
       classNamePrefix="Select"
       defaultValue={options[0]}
       options={options}
+      //   onChange={}
     />
   );
 };

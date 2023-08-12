@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const HeaderElem = styled.header`
-  border-bottom: 1px solid #7b61ff;
+  border-bottom: 1px solid var(--main-blue);
 `;
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ export const HeaderTitle = styled.h1`
   font-size: 24px;
   font-weight: 400;
   line-height: 1.38;
-  color: #7b61ff;
+  color: var(--main-blue);
 `;
 export const InputWrapper = styled.div`
   position: relative;

@@ -2,12 +2,12 @@ import { Container } from 'components/SharedLayout/SharedLayout.styled';
 import { HeaderElem, HeaderInput, HeaderTitle, HeaderWrapper, InputWrapper, SearchBtn } from './HeaderComp.styled';
 import { useState } from 'react';
 import LangSelect from 'components/LangSelect/LangSelect';
+import { FiSearch } from 'react-icons/fi';
 
 export const HeaderComp = () => {
   const [search, setSearch] = useState("");
 
   const searchChange = (e) => {
-    console.log(e.target.value);
     setSearch(e.target.value);
   }
   
@@ -29,7 +29,7 @@ export const HeaderComp = () => {
               onChange={searchChange}
               onKeyDown={searchEvent}
             />
-            <SearchBtn onClick={searchEvent}>Ф</SearchBtn>
+            <SearchBtn onClick={searchEvent}><FiSearch size={24}/></SearchBtn>
           </InputWrapper>
           <LangSelect/>
         </HeaderWrapper>
