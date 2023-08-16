@@ -6,8 +6,8 @@ export const SelectInput = styled(Select)`
     font-size: 16px;
     line-height: 1;
     font-weight: 500;
-
-    min-width: 148px;
+    min-width: 48px;
+    /* min-width: 148px; */
     height: 48px;
     border-radius: 8px;
     background-color: #ffffff;
@@ -26,6 +26,7 @@ export const SelectInput = styled(Select)`
 
   .Filter__placeholder {
     color: var(--main-black);
+    margin: 0 auto;
   }
 
   .Filter__input {

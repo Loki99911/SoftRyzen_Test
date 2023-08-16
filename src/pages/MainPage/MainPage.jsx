@@ -6,14 +6,18 @@ import {
   BarTitle,
   BarWrapper,
   CardsWrap,
+  FilterWrapper,
+  SelectHolderText,
   SelectItemWrap,
 } from './MainPage.styled';
 import AddBtn from 'components/AddBtn/AddBtn';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from 'components/Card/Card';
+import { useMediaRules } from 'hooks/MediaRules';
 
 const MainPage = () => {
+  const { isMobile, isDesktop, isTablet } = useMediaRules();
   const [data, setData] = useState([]);
   useEffect(() => {
     const getEvents = async () => {
@@ -30,7 +34,6 @@ const MainPage = () => {
     getEvents();
   }, []);
 
-  console.log(data);
   const categoryList = [
     { value: 'art', label: 'art' },
     { value: 'music', label: 'music' },
@@ -100,13 +103,14 @@ const MainPage = () => {
 
   const sortHolder = (
     <SelectItemWrap>
-      <p>Sort by</p>
+      {!isMobile && <SelectHolderText>Sort by</SelectHolderText>}
       <FiFilter />
     </SelectItemWrap>
   );
+
   const categoryHolder = (
     <SelectItemWrap>
-      <p>Category</p>
+      {!isMobile && <SelectHolderText>Category</SelectHolderText>}
       <BiSliderAlt />
     </SelectItemWrap>
   );
@@ -114,10 +118,12 @@ const MainPage = () => {
   return (
     <>
       <BarWrapper>
-        <BarTitle>My events</BarTitle>
-        <FilterSelect options={categoryList} holder={categoryHolder} />
-        <FilterSelect options={sortList} holder={sortHolder} />
-        <AddBtn />
+        {!isMobile && <BarTitle>My events</BarTitle>}
+        <FilterWrapper>
+          <FilterSelect options={categoryList} holder={categoryHolder} />
+          <FilterSelect options={sortList} holder={sortHolder} />
+          <AddBtn />
+        </FilterWrapper>
       </BarWrapper>
       <CardsWrap>
         {data.map(obj => (
