@@ -1,5 +1,7 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-export const AddButtonStyled = styled.button`
+
+export const AddButtonStyled = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: space-between;

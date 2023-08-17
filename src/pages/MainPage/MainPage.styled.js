@@ -42,9 +42,15 @@ export const SelectItemWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   @media screen and (min-width: 768px) {
-    padding: 0 24px;
+    padding: 0px 24px;
   }
 `;
+
+export const SelectItemText = styled.p`
+  /* display: flex; */
+  /* white-space: nowrap; */
+`;
+
 export const SelectHolderText = styled.p`
   margin-right: 16px;
 `;

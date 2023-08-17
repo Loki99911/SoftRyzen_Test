@@ -7,7 +7,6 @@ export const SelectInput = styled(Select)`
     line-height: 1;
     font-weight: 500;
     min-width: 48px;
-    /* min-width: 148px; */
     height: 48px;
     border-radius: 8px;
     background-color: #ffffff;
@@ -18,6 +17,7 @@ export const SelectInput = styled(Select)`
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
       color: var(--main-blue);
+      width: 170px;
       .Filter__placeholder {
         color: var(--main-blue);
       }
@@ -38,11 +38,11 @@ export const SelectInput = styled(Select)`
   }
 
   .Filter__indicator {
-    padding: 8px 8px 8px 0;
+  padding: 8px 8px 8px 0;
   }
 
   .Filter__value--container {
-    padding: 2px 0px 2px 8px;
+  padding: 2px 0px 2px 8px;
   }
 
   .Filter__single-value {
@@ -56,9 +56,10 @@ export const SelectInput = styled(Select)`
   }
 
   .Filter__menu {
+    font-size: 14px;
     margin: 0;
     border: none;
-    /* padding: 16px 12px; */
+    padding: 0;
     background-color: #ffffff;
     border-radius: 0px;
     border-bottom-left-radius: 8px;
@@ -66,6 +67,7 @@ export const SelectInput = styled(Select)`
   }
 
   .Filter__menu-list {
+    max-height: 100%;
     border: none;
     padding: 0;
     list-style: none;
@@ -76,7 +78,8 @@ export const SelectInput = styled(Select)`
   }
 
   .Filter__option {
-    padding: 4px 0;
+    padding-left:0;
+    padding-right: 0;
     background-color: transparent;
     color: var(--main-gray);
     cursor: pointer;

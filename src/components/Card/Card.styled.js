@@ -124,6 +124,7 @@ export const CardDescription = styled.p`
 
 export const CardLinkWrap = styled.div`
   display: flex;
+  background-color: var(--main-white);
   flex-direction: row-reverse;
   padding: 8px 16px 16px 16px;
 `;

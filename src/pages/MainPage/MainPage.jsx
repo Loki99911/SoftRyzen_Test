@@ -8,6 +8,7 @@ import {
   CardsWrap,
   FilterWrapper,
   SelectHolderText,
+  SelectItemText,
   SelectItemWrap,
 } from './MainPage.styled';
 import AddBtn from 'components/AddBtn/AddBtn';
@@ -17,7 +18,7 @@ import Card from 'components/Card/Card';
 import { useMediaRules } from 'hooks/MediaRules';
 
 const MainPage = () => {
-  const { isMobile, isDesktop, isTablet } = useMediaRules();
+  const { isMobile } = useMediaRules();
   const [data, setData] = useState([]);
   useEffect(() => {
     const getEvents = async () => {
@@ -35,13 +36,62 @@ const MainPage = () => {
   }, []);
 
   const categoryList = [
-    { value: 'art', label: 'art' },
-    { value: 'music', label: 'music' },
-    { value: 'business', label: 'business' },
-    { value: 'conference', label: 'conference' },
-    { value: 'workshop', label: 'workshop' },
-    { value: 'party', label: 'party' },
-    { value: 'sport', label: 'sport' },
+    {
+      value: 'art',
+      label: (
+        <SelectItemWrap>
+          <SelectItemText>art</SelectItemText>
+        </SelectItemWrap>
+      ),
+    },
+    {
+      value: 'music',
+      label: (
+        <SelectItemWrap>
+          <SelectItemText>music</SelectItemText>
+        </SelectItemWrap>
+      ),
+    },
+    {
+      value: 'business',
+      label: (
+        <SelectItemWrap>
+          <SelectItemText>business</SelectItemText>
+        </SelectItemWrap>
+      ),
+    },
+    {
+      value: 'conference',
+      label: (
+        <SelectItemWrap>
+          <SelectItemText>conference</SelectItemText>
+        </SelectItemWrap>
+      ),
+    },
+    {
+      value: 'workshop',
+      label: (
+        <SelectItemWrap>
+          <SelectItemText>workshop</SelectItemText>
+        </SelectItemWrap>
+      ),
+    },
+    {
+      value: 'party',
+      label: (
+        <SelectItemWrap>
+          <SelectItemText>party</SelectItemText>
+        </SelectItemWrap>
+      ),
+    },
+    {
+      value: 'sport',
+      label: (
+        <SelectItemWrap>
+          <SelectItemText>sport</SelectItemText>
+        </SelectItemWrap>
+      ),
+    },
   ];
 
   const sortList = [
@@ -49,7 +99,7 @@ const MainPage = () => {
       value: 'name+',
       label: (
         <SelectItemWrap>
-          <p>by name</p>
+          <SelectItemText>by name</SelectItemText>
           <FaArrowUp />
         </SelectItemWrap>
       ),
@@ -58,7 +108,7 @@ const MainPage = () => {
       value: 'name-',
       label: (
         <SelectItemWrap>
-          <p>by name</p>
+          <SelectItemText>by name</SelectItemText>
           <FaArrowDown />
         </SelectItemWrap>
       ),
@@ -67,7 +117,7 @@ const MainPage = () => {
       value: 'data+',
       label: (
         <SelectItemWrap>
-          <p>by data</p>
+          <SelectItemText>by data</SelectItemText>
           <FaArrowUp />
         </SelectItemWrap>
       ),
@@ -76,7 +126,7 @@ const MainPage = () => {
       value: 'data-',
       label: (
         <SelectItemWrap>
-          <p>by data</p>
+          <SelectItemText>by data</SelectItemText>
           <FaArrowDown />
         </SelectItemWrap>
       ),
@@ -85,7 +135,7 @@ const MainPage = () => {
       value: 'priority+',
       label: (
         <SelectItemWrap>
-          <p>by priority</p>
+          <SelectItemText>by priority</SelectItemText>
           <FaArrowUp />
         </SelectItemWrap>
       ),
@@ -94,7 +144,7 @@ const MainPage = () => {
       value: 'priority-',
       label: (
         <SelectItemWrap>
-          <p>by priority</p>
+          <SelectItemText>by priority</SelectItemText>
           <FaArrowDown />
         </SelectItemWrap>
       ),

@@ -42,6 +42,7 @@ export const HeaderInput = styled.input`
   
   @media screen and (min-width: 768px) {
     width: 368px;
+    margin-right: 24px;
   }
   @media screen and (min-width: 1280px) {
     width: 410px;

@@ -6,7 +6,7 @@ const AddBtn = () => {
   
   const { isMobile } = useMediaRules();
   return (
-    <AddButtonStyled>
+    <AddButtonStyled to={'create'}>
       <FiPlus />
       {!isMobile && <span>Add new event</span>}
     </AddButtonStyled>
