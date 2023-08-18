@@ -5,6 +5,7 @@ import {
   CreateTitle,
 } from './CreateEventPage.styled';
 import { useNavigate } from 'react-router-dom';
+import { FormComp } from 'components/FormComp/FormComp';
 
 const CreateEventPage = () => {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ const CreateEventPage = () => {
           Back
         </BackBtn>
         <CreateTitle>Create new event</CreateTitle>
+        <FormComp/>
       </CreateEventWrapper>
     </>
   );
